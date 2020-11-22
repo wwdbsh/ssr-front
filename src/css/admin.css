@@ -1,0 +1,51 @@
+ 
+.column1{
+    height: 95vh;
+    width: 50%;
+    border: 10px solid blue !important;
+}
+.column2{
+    height: 95vh;
+    width: 50%;
+    border: 10px solid blue !important;
+}
+
+.left-side-cell {
+    border: 10px solid blue !important;
+    font-size: 70px;
+    color: black;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.logoutButton {
+   width: 10%;
+   height: 5%;
+   background-color: transparent;
+   font-size: large;
+   font-weight: strong;
+   margin: 10px;
+   cursor: pointer;
+}
+
+.logoutButton:hover {
+  background-color: gray;
+}
+
+
+.right-side-cell {
+    border: 20px solid red !important;
+    font-size: 70px;
+    color: white;
+    opacity: 80%;
+}
+
+.button-link {
+    font-size: 70px;
+    width: 100%;
+   cursor: pointer;
+}
+
+.left-side-cell:hover {
+ background-color: blue;
+}

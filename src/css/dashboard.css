@@ -1,0 +1,112 @@
+.column1 {
+    width: 50%;
+    padding-left: 1%;
+}
+.column2 {
+    width: 20%;
+    padding-left: 1%;
+}
+.column-margin {
+    margin-left: 5%;
+}
+.chat-windows {
+    background: lightblue;
+    background: -webkit-linear-gradient(to right, #048179, #023aa1);
+    opacity: 90%;
+    background: linear-gradient(to right, #048179, #023aa1);
+}
+.hover-classroom:hover {
+    cursor: pointer;
+    background-color: rgb(73, 168, 135);
+}
+.chat-main {
+    height: 100%;
+    margin: 10;
+}
+
+.chat {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.card {
+    height: 95vh;
+    border-radius: 15px !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+}
+.contacts_body {
+    padding: 0.75rem 0 !important;
+    overflow-y: scroll;
+    white-space: nowrap;
+}
+h3 {
+    color: chartreuse;
+}
+.contacts {
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    height: 85vh;
+    overflow-y: scroll;
+}
+.contacts li {
+    width: 100% !important;
+    padding: 3px 6px;
+}
+
+.contacts_body {
+    padding: 0.75rem 0 !important;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+.msg_card_body {
+    overflow-y: auto;
+}
+.card-header {
+    border-radius: 15px 15px 0 0 !important;
+    border-bottom: 0 !important;
+}
+.card-footer {
+    border-radius: 0 0 15px 15px !important;
+    border-top: 0 !important;
+}
+.container {
+    align-content: center;
+}
+
+.logoutButton {
+    width: 10%;
+    height: 5%;
+    background-color: transparent;
+    font-size: large;
+    font-weight: strong;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.logoutButton:hover {
+    background-color: gray;
+}
+
+.right-side-cell {
+    border: 20px solid red !important;
+    font-size: 70px;
+    color: white;
+    opacity: 80%;
+}
+
+.button-link {
+    font-size: 70px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.left-side-cell:hover {
+    background-color: blue;
+}
+.button {
+    border: 3px solid transparent;
+    border-radius: 5px;
+    background-color: #023aa1;
+    color: antiquewhite;
+    font-size: larger;
+}

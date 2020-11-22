@@ -1,0 +1,31 @@
+.one-row-dashboard {
+    height: 85vh;
+    width: 100%;
+    border: 10px solid blue !important;
+}
+
+.logoutButton {
+   width: 10%;
+   height: 5%;
+   background-color: transparent;
+   font-size: large;
+   font-weight: strong;
+   margin: 10px;
+   cursor: pointer;
+}
+
+.logoutButton:hover {
+  background-color: gray;
+}
+
+td {
+    border: 10px solid blue !important;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: lightgray;
+    color: black;
+}
