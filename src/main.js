@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import io from "socket.io-client";
-// const socket = io('http://localhost:4000'); 
+//const socket = io('http://localhost:4000'); 
 const socket = io('http://ec2-35-174-165-153.compute-1.amazonaws.com:4000'); 
 window.socket = socket;
 import VueCookies from "vue-cookies";
@@ -9,7 +9,7 @@ import VueCookies from "vue-cookies";
 window.vue = Vue;
 window.axios = require('axios');
 window.api_calls = {
-  // api_url: 'http://localhost:4000',
+  //api_url: 'http://localhost:4000',
   api_url: 'http://ec2-35-174-165-153.compute-1.amazonaws.com:4000',
   getChatroomsByUserIdEndPoint:"/chatroomPage/getChatroomsByUserId",
   getBansByUserIdEndPoint:"/chatroomPage/getBansByUserId",
@@ -30,6 +30,7 @@ window.api_calls = {
   getAllChatUsersEndpoint: "/adminPage/getAllUserInformation",
   assignClassesEndpoint:"/adminPage/assignClasses",
   leaveClassesEndpoint:"/adminPage/removeUserById",
+  setThemeEndpoint : "/chatroomPage/setClassroomThemeByRoomId",
   getEmail :function() {
 	  let email = window.vue.$cookies.get("ssr_cookie")
 	  return email;
@@ -180,12 +181,25 @@ window.api_calls = {
     .then(result => console.log('(1) Success Login:', result))
     .catch(error => console.error('(1) Error Login:', error));
     return request;
+  },
+  setTheme: function(room_id, fg, bg, banner_url) {
+    const request = window.axios.post(this.api_url + this.setThemeEndpoint, {
+      ROOM_ID:room_id,
+      FG:fg,
+      BG:bg,
+      BANNER_URL:banner_url
+    });
+    request
+    .then(result => console.log('(1) Success SetTheme:', result))
+    .catch(error => console.error('(1) Error SetTheme:', error));
+    return request;
   }
 }
 
 Vue.config.productionTip = false
 Vue.use(VueCookies);
 Vue.$cookies.config("7d");
+window.vue = Vue;
 
 new Vue({
   render: h => h(App),

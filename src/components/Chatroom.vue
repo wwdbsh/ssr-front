@@ -15,7 +15,7 @@
 					</div>
 					<div class="card-body contacts_body">
 						<ul class="contacts">
-						<li @click="clickClassRoom(index)"  v-for="(item, index) in classRooms" :key="item.key" class="hover-classroom" :class="{active : activeIndex == index, inactive : activeIndex != index, breakout : item.parent_chatroom_id}">
+						<li @click="clickClassRoom(index)"  v-for="(item, index) in classRooms" :key="item.key" class="hover-classroom" :id="'chat_' + item.chatroom_id" :class="{active : activeIndex == index, inactive : activeIndex != index, breakout : item.parent_chatroom_id}">
 							<div class="d-flex bd-highlight">
 								<div class="user_info">
 									<span>{{item.chatroom_name}}</span> <br/>
@@ -33,7 +33,7 @@
 					</div>
 				</div></div>
 				<div class="col-md-10 col-xl-9 chat">
-					<div class="card chat-windows">
+					<div class="card chat-windows" id="colorme">
 						<div class="card-header msg_head">
 							<div class="d-flex bd-highlight">
 								<div class="user_info">
@@ -230,6 +230,7 @@ export default {
 		this.currentName = this.classRooms[index].chatroom_name;
 		this.currentId = this.classRooms[index].chatroom_id;
 		this.parentId = this.classRooms[index].parent_chatroom_id
+		this.setElementColor("colorme", this.classRooms[index].primary_color, this.classRooms[index].secondary_color)
 		this.clearMessages();
 		this.autoscroll = true;
 		this.requestNewMessages();
@@ -237,7 +238,11 @@ export default {
 		this.filterTag = ""
 		document.getElementById("selectFilter").options.selectedIndex = 1
 		this.tagListDirty = true;
+
 	},
+	setElementColor(id, fore, back) {
+        document.getElementById(id).style.backgroundImage = 'linear-gradient(to right, ' + fore + ', '+back+')'
+    },
 	clearMessages : function() {
 		console.log("clearing messages")
 		console.log(this, this.allMessages)
@@ -331,7 +336,8 @@ export default {
 		.then((response) => {
 			this.classRooms = []
 			response.data.CONTENT.forEach((room) => {
-					room.key = room.parent_chatroom_id ? room.parent_chatroom_id * 1e6 + room.chatroom_id : room.chatroom_id * 1e6
+					room.key = room.parent_chatroom_id ? room.parent_chatroom_id * 1e6 + room.chatroom_id : room.chatroom_id * 1e6;
+					window.vue.nextTick(function () {this.setElementColor("chat_" + room.chatroom_id, room.primary_color, room.secondary_color)}, this)
 				});
 			response.data.CONTENT.sort((a, b) => {return  a.key - b.key})
 			console.log("CONTENT")
