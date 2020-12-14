@@ -5,38 +5,6 @@
   <div class="dashboard-main">
     <button class="logoutButton" @click="turnOnClassRoom()">Go to class</button>
     <button class="logoutButton" @click="logOutClick()">Log out</button>
-    <!-- <table class='one-row-dashboard'>
-        <tr>
-            <td>
-                <table>
-                    <tr>
-                    <td class='left-side-cell'>
-                        <button  @click='turnOnClassRoom()' class='button-link'> Go To Chatroom </button>
-
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td class='left-side-cell'>
-                        <button @click='accountInfoClicked()' class='button-link'> Account Info</button>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td class='left-side-cell'>
-                        <button  @click='adminClicked()' class='button-link'> Administration </button>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td class='left-side-cell'>
-                        <button @click='permissionsClicked()' class='button-link' >Permissions</button>
-
-                    </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table> -->
 
     <div class="row">
       <div class="column2 column-margin">

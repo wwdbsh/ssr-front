@@ -22,3 +22,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### App url: http://ec2-35-174-165-153.compute-1.amazonaws.com:8081

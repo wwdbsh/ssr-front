@@ -35,7 +35,7 @@
 }
 .contacts_body {
     padding: 0.75rem 0 !important;
-    overflow-y: scroll;
+    overflow-y: auto;
     white-space: nowrap;
 }
 h3 {
@@ -46,7 +46,7 @@ h3 {
     padding: 0;
     overflow: hidden;
     height: 85vh;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .contacts li {
     width: 100% !important;
