@@ -1,5 +1,7 @@
 # student-study-rooms
 
+The Student Study Rooms is a chat application for students who want to study with others.
+
 ## Project setup
 ```
 npm install
