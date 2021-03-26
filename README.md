@@ -17,12 +17,4 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 ### App url: http://ec2-35-175-234-156.compute-1.amazonaws.com:8080
